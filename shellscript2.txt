@@ -1,0 +1,67 @@
+#!bin/sh
+if grep unix myfile
+then
+        .
+        .
+else
+        echo "sorry,unix was not found"
+fi
+
+output:
+bash: ./sangeeth.sh: bin/sh: bad interpreter: No such file or directory
+program7:
+#!/bin/sh
+count=0
+for i in *;do
+        if test -x $i; then
+                count='expr $count + 1'
+        fi
+done
+echo total of $count files executable.
+output:
+#!/bin/sh
+count=0
+for i in *;do
+        if test -x $i; then
+                count='expr $count + 1'
+        fi
+done
+echo total of $count files executable.
+program8:
+!/bin/sh
+smallest=10000
+for i in 5 8 19 8 7; do
+        if [$i -lt $smallest ] ; then
+                smallest=$i
+        fi
+done
+echo $smallest
+output:
+./pgm8.sh: line 4: [5: command not found
+./pgm8.sh: line 4: [8: command not found
+./pgm8.sh: line 4: [19: command not found
+./pgm8.sh: line 4: [8: command not found
+./pgm8.sh: line 4: [7: command not found
+10000
+program:9
+#!/bin/sh
+i=1
+sum=0
+while [ $i -le 100 ]; do
+        sum='expr $sum + $i'
+        i='expr $i + 1'
+done
+echo the sum is $sum.
+output:
+/mummy.sh: line 4: [: too many arguments
+the sum is expr $sum + $i.
+program10:
+% read x y z
+here are some words as input
+% echo $x
+here
+% echo $y
+are
+% echo $z
+some words as input
+
