@@ -1,3 +1,17 @@
+#!/bin/sh
+i=1
+sum=0
+while [$i -le 100 ]; do
+        sum='expr $sum + $i'
+        i='expr $i + 1'
+done
+echo the sum is$sum
+output:
+./pooja.sh: line 4: [1: command not found
+the sum is0
+program12:
+
+
 #!bin/sh
 if grep unix myfile
 then
